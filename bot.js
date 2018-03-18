@@ -18,8 +18,13 @@ client.on("message", (message) => {
     if (args[0] === undefined) {
       message.channel.send("Please enter a role to set as moderator!");
     }
-  let modRole = message.guild.roles.find("name, args[0]") {
-  
+    let testRole = message.guild.roles.find("name, args[0]");
+    if (testRole == null) {
+      message.channel.send("Please enter a valid role to set as moderator!");
+    } else {
+      let modRole = message.guild.roles.find("name, args[0]")
+      }
+  }
   
   if (command === "clear") {
     let x = args[0];
